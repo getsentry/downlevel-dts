@@ -77,3 +77,4 @@ export type TLowercase = string;
 export type TUppercase = string;
 export type TCapitalize = string;
 export type TUncapitalize = string;
+export type TMessageEvent = MessageEvent;

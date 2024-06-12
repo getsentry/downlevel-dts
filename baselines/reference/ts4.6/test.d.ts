@@ -75,3 +75,4 @@ export type TLowercase = Lowercase<'HELLO'>;
 export type TUppercase = Uppercase<'hello'>;
 export type TCapitalize = Capitalize<'hello'>;
 export type TUncapitalize = Uncapitalize<'Hello'>;
+export type TMessageEvent = MessageEvent<number>;
