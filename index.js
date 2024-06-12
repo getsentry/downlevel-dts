@@ -96,6 +96,17 @@ function doTransform(checker, targetVersion, k) {
       return ts.factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword);
     }
 
+    if (
+      semver.lt(targetVersion, "4.0.0") &&
+      isTypeReference(n, "MessageEvent") &&
+      n.typeArguments &&
+      n.typeArguments.length
+    ) {
+      // MessageEvent generic was added in 4.0.0
+      // https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#template-literal-types
+      return ts.factory.createTypeReferenceNode("MessageEvent");
+    }
+
     if (semver.lt(targetVersion, "3.6.0") && ts.isGetAccessor(n)) {
       // get x(): number => x: number
       let flags = ts.getCombinedModifierFlags(n);
