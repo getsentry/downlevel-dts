@@ -16,13 +16,13 @@
   "author": "Nathan Shively-Sanders",
   "license": "MIT",
   "dependencies": {
-    "semver": "^7.3.2",
+    "semver": "^7.5.2",
     "shelljs": "^0.8.3",
     "typescript": "next"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
-    "@types/semver": "^7.3.4",
+    "@types/semver": "^7.5.8",
     "@types/shelljs": "^0.8.6",
     "husky": "^4.0.0",
     "jest": "^28.0.0",
